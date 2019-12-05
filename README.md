@@ -1,120 +1,570 @@
-> March, 2016: If you're on an old version of Jekyll Now and run into a) build warnings or b) syntax highlighting issues caused by [Jekyll 3 and GitHub Pages updates](https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0), just :sparkles:[update your _config.yml](https://github.com/barryclark/jekyll-now/pull/445/files):sparkles: and you'll be set!
+<!DOCTYPE html>
+<html>
+<head>
+<title>MarkdownPad Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
 
-# Jekyll Now
+/* RESET
+=============================================================================*/
 
-**Jekyll** is a static site generator that's perfect for GitHub hosted blogs ([Jekyll Repository](https://github.com/jekyll/jekyll))
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
-**Jekyll Now** makes it easier to create your Jekyll blog, by eliminating a lot of the up front setup.
+/* BODY
+=============================================================================*/
 
-- You don't need to touch the command line
-- You don't need to install/configure ruby, rvm/rbenv, ruby gems :relaxed:
-- You don't need to install runtime dependencies like markdown processors, Pygments, etc
-- If you're on Windows, this will make setting up Jekyll a lot easier
-- It's easy to try out, you can just delete your forked repository if you don't like it
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
 
-In a few minutes you'll be set up with a minimal, responsive blog like the one below giving you more time to spend on writing epic blog posts!
+body>*:first-child {
+  margin-top: 0 !important;
+}
 
-![Jekyll Now Theme Screenshot](/images/jekyll-now-theme-screenshot.jpg "Jekyll Now Theme Screenshot")
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
 
-## Quick Start
+/* BLOCKS
+=============================================================================*/
 
-### Step 1) Fork Jekyll Now to your User Repository
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
 
-Fork this repo, then rename the repository to yourgithubusername.github.io.
+/* HEADERS
+=============================================================================*/
 
-Your Jekyll blog will often be viewable immediately at <https://yourgithubusername.github.io> (if it's not, you can often force it to build by completing step 2)
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
 
-![Step 1](/images/step1.gif "Step 1")
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
 
-### Step 2) Customize and view your site
+h1 {
+  font-size: 28px;
+  color: #000;
+}
 
-Enter your site name, description, avatar and many other options by editing the _config.yml file. You can easily turn on Google Analytics tracking, Disqus commenting and social icons here too.
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
 
-Making a change to _config.yml (or any file in your repository) will force GitHub Pages to rebuild your site with jekyll. Your rebuilt site will be viewable a few seconds later at <https://yourgithubusername.github.io> - if not, give it ten minutes as GitHub suggests and it'll appear soon
+h3 {
+  font-size: 18px;
+}
 
-> There are 3 different ways that you can make changes to your blog's files:
+h4 {
+  font-size: 16px;
+}
 
-> 1. Edit files within your new username.github.io repository in the browser at GitHub.com (shown below).
-> 2. Use a third party GitHub content editor, like [Prose by Development Seed](http://prose.io). It's optimized for use with Jekyll making markdown editing, writing drafts, and uploading images really easy.
-> 3. Clone down your repository and make updates locally, then push them to your GitHub repository.
+h5 {
+  font-size: 14px;
+}
 
-![_config.yml](/images/config.png "_config.yml")
+h6 {
+  color: #777;
+  font-size: 14px;
+}
 
-### Step 3) Publish your first blog post
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
 
-Edit `/_posts/2014-3-3-Hello-World.md` to publish your first blog post. This [Markdown Cheatsheet](http://www.jekyllnow.com/Markdown-Style-Guide/) might come in handy.
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
 
-![First Post](/images/first-post.png "First Post")
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
 
-> You can add additional posts in the browser on GitHub.com too! Just hit the + icon in `/_posts/` to create new content. Just make sure to include the [front-matter](http://jekyllrb.com/docs/frontmatter/) block at the top of each new blog post and make sure the post's filename is in this format: year-month-day-title.md
+/* LINKS
+=============================================================================*/
 
-## Local Development
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
 
-1. Install Jekyll and plug-ins in one fell swoop. `gem install github-pages` This mirrors the plug-ins used by GitHub Pages on your local machine including Jekyll, Sass, etc.
-2. Clone down your fork `git clone https://github.com/yourusername/yourusername.github.io.git`
-3. Serve the site and watch for markup/sass changes `jekyll serve`
-4. View your website at http://127.0.0.1:4000/
-5. Commit any changes and push everything to the master branch of your GitHub user repository. GitHub Pages will then rebuild and serve your website.
+a:hover {
+  text-decoration: underline;
+}
 
-## Moar!
+/* LISTS
+=============================================================================*/
 
-I've created a more detailed walkthrough, [**Build A Blog With Jekyll And GitHub Pages**](http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/) over at the Smashing Magazine website. Check it out if you'd like a more detailed walkthrough and some background on Jekyll. :metal:
+ul, ol {
+  padding-left: 30px;
+}
 
-It covers:
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
 
-- A more detailed walkthrough of setting up your Jekyll blog
-- Common issues that you might encounter while using Jekyll
-- Importing from Wordpress, using your own domain name, and blogging in your favorite editor
-- Theming in Jekyll, with Liquid templating examples
-- A quick look at Jekyll 2.0’s new features, including Sass/Coffeescript support and Collections
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
 
-## Jekyll Now Features
+dl {
+  padding: 0;
+}
 
-✓ Command-line free _fork-first workflow_, using GitHub.com to create, customize and post to your blog  
-✓ Fully responsive and mobile optimized base theme (**[Theme Demo](http://jekyllnow.com)**)  
-✓ Sass/Coffeescript support using Jekyll 2.0  
-✓ Free hosting on your GitHub Pages user site  
-✓ Markdown blogging  
-✓ Syntax highlighting  
-✓ Disqus commenting  
-✓ Google Analytics integration  
-✓ SVG social icons for your footer  
-✓ 3 http requests, including your avatar  
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
 
-✘ No installing dependencies
-✘ No need to set up local development  
-✘ No configuring plugins  
-✘ No need to spend time on theming  
-✘ More time to code other things ... wait ✓!  
+dl dt:first-child {
+  padding: 0;
+}
 
-## Questions?
+dl dt>:first-child {
+  margin-top: 0px;
+}
 
-[Open an Issue](https://github.com/barryclark/jekyll-now/issues/new) and let's chat!
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
 
-## Other forkable themes
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
 
-You can use the [Quick Start](https://github.com/barryclark/jekyll-now#quick-start) workflow with other themes that are set up to be forked too! Here are some of my favorites:
+dl dd>:first-child {
+  margin-top: 0px;
+}
 
-- [Hyde](https://github.com/poole/hyde) by MDO
-- [Lanyon](https://github.com/poole/lanyon) by MDO
-- [mojombo.github.io](https://github.com/mojombo/mojombo.github.io) by Tom Preston-Werner
-- [Left](https://github.com/holman/left) by Zach Holman
-- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) by Michael Rose
-- [Skinny Bones](https://github.com/mmistakes/skinny-bones-jekyll) by Michael Rose
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
 
-## Credits
+/* CODE
+=============================================================================*/
 
-- [Jekyll](https://github.com/jekyll/jekyll) - Thanks to its creators, contributors and maintainers.
-- [SVG icons](https://github.com/neilorangepeel/Free-Social-Icons) - Thanks, Neil Orange Peel. They're beautiful.
-- [Solarized Light Pygments](https://gist.github.com/edwardhotchkiss/2005058) - Thanks, Edward.
-- [Joel Glovier](http://joelglovier.com/writing/) - Great Jekyll articles. I used Joel's feed.xml in this repository.
-- [David Furnes](https://github.com/dfurnes), [Jon Uy](https://github.com/jonuy), [Luke Patton](https://github.com/lkpttn) - Thanks for the design/code reviews.
-- [Bart Kiers](https://github.com/bkiers), [Florian Simon](https://github.com/vermluh), [Henry Stanley](https://github.com/henryaj), [Hun Jae Lee](https://github.com/hunjaelee), [Javier Cejudo](https://github.com/javiercejudo), [Peter Etelej](https://github.com/etelej), [Ben Abbott](https://github.com/jaminscript), [Ray Nicholus](https://github.com/rnicholus), [Erin Grand](https://github.com/eringrand), [Léo Colombaro](https://github.com/LeoColomb), [Dean Attali](https://github.com/daattali), [Clayton Errington](https://github.com/cjerrington), [Colton Fitzgerald](https://github.com/coltonfitzgerald), [Trace Mayer](https://github.com/sunnankar) - Thanks for your [fantastic contributions](https://github.com/barryclark/jekyll-now/commits/master) to the project!
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
 
-## Contributing
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
 
-Issues and Pull Requests are greatly appreciated. If you've never contributed to an open source project before I'm more than happy to walk you through how to create a pull request.
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
 
-You can start by [opening an issue](https://github.com/barryclark/jekyll-now/issues/new) describing the problem that you're looking to resolve and we'll go from there.
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
 
-I want to keep Jekyll Now as minimal as possible. Every line of code should be one that's useful to 90% of the people using it. Please bear that in mind when submitting feature requests. If it's not something that most people will use, it probably won't get merged. :guardsman:
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Unix与互联网基础入门</h1>
+<blockquote>
+<p><em>The Unix and Internet Fundamentals HOWTO</em><br/>
+ <em>Created by Eric Steven Raymond, <a href="esr@thyrsus.com">&lt;esr@thyrsus.com &gt;</a></em> <br/>
+<em>翻译:Mike,  &lt; <a href="chrystaltyler19007@gmail.com">chrystaltyler19007@gmail.com</a> &gt;</em><br/>
+<em>本文档翻译基于原文档2.14版</em></p>
+</blockquote>
+<h2>目录</h2>
+<ol>
+<li>导言</li>
+<li>计算机的基本构成</li>
+<li>当你打开电脑时发生了什么</li>
+<li>当你登录系统时发生了什么</li>
+<li>引导结束时，你的程序是如何运行的</li>
+<li>输入设备与中断机制是如何工作的</li>
+<li>我的电脑如何同时做好几件事</li>
+<li>我的计算机如何不让进程相互干扰的</li>
+<li>我的电脑是如何在内存中存储数据的</li>
+<li>我的电脑是如何在硬盘上存储数据的</li>
+<li>计算机语言是如何工作的</li>
+<li>互联网是如何工作的</li>
+<li>更多</li>
+</ol>
+<h2>1.导言</h2>
+<h3>1.1这份文档的目的</h3>
+<p>　　这份文档意在通过实践帮助那些Linux和互联网的用户，尽管这是一个非常不错的学习方法，但仅仅靠实践有时也会让人对事情的内在逻辑没有清晰的认识，从而产生基础知识方面的空白，这些空缺的形式让人难以进行创造性地思考和有效的解决问题。<br/>
+　　我会尽力用清晰、简单的语言来描述其中的内在逻辑。这份文档会为在计算机上运行Unix或Linux的人而调整，虽然如此，文档中关于Unix的内容，在不同机器与各种不同Linux版本中也同样适用。<br/>
+　　我在这里假设你用的是IntelPC，在PowerPC和其它类型的电脑上有些细微差异，但是基本的内容是一样的。<br/>
+　　我不会重复讲述，所以你必须集中你的注意力，这同时也意味着这份文档不会浪费那怕一丁点你的时间，你最好先略读一遍全文，在你消化完你所学的之后也应该转过头来重温几次。<br/>
+　　文档会一直更新，我将会不断增加内容以对用户的反馈做出回应，所以你应该时不时过来回顾一下。<br/></p>
+<h3>1.2文档的最新版本</h3>
+<p>　　这份文档的最新版本会在<a href="news:comp.os.linux.help">news:comp.os.linux.help</a>、<a href="news:comp.os.linux.announce">news:comp.os.linux.announce</a>和<a href="news:news.answers">news:news.answers</a>上发布。同时也会在各类网站上更新，包括Linux文档计划的主页上。你也可以通过<a href="http://www.tldp.org/HOWTO/Unix-and-Internet-Fundamentals-HOWTO/index.html">http://www.tldp.org/HOWTO/Unix-and-Internet-Fundamentals-HOWTO/index.html</a>来浏览，这份文档已被翻译成波斯语、波兰语、西班牙语、土耳其语、中文。</p>
+<h3>1.3反馈于更正</h3>
+<p>　　如果你对此文档有疑问或意见，请随意发邮件给Eric S.Raymond，邮件地址为<a href="esr@thyrsus.com">esr@thyrsus.com</a>。我欢迎任何建议与批评。我尤其欢迎想对某块内容进行详细说明的超链。如果你在这份文档中找到任何错误，请让我们知道，已使我们可以在下一版本中纠正，谢谢。</p>
+<h3>1.4相关</h3>
+<p>　　如果你是因为想成为一个黑客而阅读此文档，你也可以读读<a href="http://www.catb.org/~esr/faqs/hacker-howto.html">How To Become A Hacker FAQ</a>,其中会有些对你有帮助的内容。</p>
+<h2>2.计算机的基本构成</h2>
+<p>　　你的计算机里有一个实时运行的处理器芯片，其中还有一个内存（Windows将其称为随机存储存储器（RAM），Unix用户则称其为磁心（core），这个术语是对RAM由铁氧体磁芯圈构成的一种形象化的叫法）。处理器和内存都运行在主板上，主板则是你计算机的心脏。 <br/>
+　　你的计算机有一个显示器和一个键盘、有硬盘和利用光学原理的只读光盘（CD-ROM）光驱或者是数字多功能光盘（DVD）的光驱、还可能会有一个软盘。这些设备中有些以控制卡的形式插在主板上以让计算机驱动它们，另一些则以芯片组的形式直接嵌入主板中以实现与控制卡相同的功能，例如你的键盘功能过于简单，所以并不需要一个单独的控制卡，所以控制电路直接放在键盘底部里了。<br/>
+　　我们之后就会对这些设备的运行原理进行深入了解，现在你只需要记住这些基础的、关于他们如何协作运行的基础知识：<br/>
+　　你的计算机的所有组成都是通过总线（bus），自然而然，你插入的那些控制卡（显卡、磁盘驱动器、声卡）就是插入在总线中，总线就是你的计算机各种组件间数据的高速通道（处理器、显示器、磁盘等等）。<br/>
+　　（如果你给电脑连接各种设备时还看过像“ISA“、“PCI”、“PCMCIA”这样的东西，你也不知道这些是什么意思，其实他们都是总线型号。ISA除了一些小细节上，其实和在1980用在IBM首个个人电脑上的总线型号一样的，之后就没再用了；PCI全称外围组件互连标准（PeripheralComponent Interconnection），现代个人计算机大多都是使用这种类型的总线，现在的麦金塔也是如此;PCMCIA是用于笔记本上的基于ISA的一种变体，使用了更小的接口）。<br/>
+　　让所有组件运行起来的处理器，你看不到它上面有任何部位与其它组件相连，所以它只能通过总线与其它组件交流。能满足处理器的速度且能够迅速的访问各组件只有内存了，为了让程序运行起来，所以程序只能放在磁心（内存）里了。<br/>
+　　当你的计算机读取磁盘上的一段程序或者数据时，实际上是你的处理器发送了一个读取请求到你的磁盘控制器上，之后磁盘驱动器通过总线给处理器发送数据已被读取且已经传送到内存的某个位置，随后处理器可以通过总线读取在内存中的数据。<br/>
+　　你的屏幕和电脑也是通过总线与处理器交换数据，但是是以一种更为简单的方式，我们之后再来讨论这个。到此为止，你已经有足够的知识去学习下一章了：当你打开电脑时发生了什么？</p>
+<h2>3.当你打开电脑时发生了什么？</h2>
+<p>　　没有程序运行的计算机就是一堆无用的带电废铁。当你打开计算机时发生的第一件事就是运行了一个被称作操作系统的特殊程序。操作系统的职责则是在控制硬件时处理多如牛毛的细节以便于的程序运行。启动操作系统的过程被称为引导，最初被叫做bootstraping，暗示通过解鞋带将自己释放开来（originally this was bootstrapping and alluded to　the process of pulling yourself up &quot;by your bootstraps）。你的计算机知道如何进行引导，因为引导说明已被内置在芯片BIOS（或Basic Input/Output System）中了。<br/>
+　　BIOS芯片上说明了，引导程序（bootloader，Linux下则称为Grub或LILO）的位置，一般在最低序号的硬盘中，引导程序被传入内存中然后运行。<br/>
+　　引导程序通过寻找内核（kernel），并将其加载进内存中让其运行然后让真正的操作系统运行起来，如果你运行Linux时在屏幕上看到”LILO“并且后面跟着一排小圆点，那是正在加载内核（每个小点表示已经加载完一个磁盘块，磁盘里存储的就是内核代码）。<br/>
+　　（你可能在想为什么BIOS不让内核直接加载，为什么还要多此一举的使用引导程序呢？很好的问题，这是因为BIOS并没有那么的聪明，相反它很笨，Linux在引导之后的时间里就不会再用BIOS了，BIOS最早是为磁盘容量很小的8位计算机编写的，这种计算机显然无法直接遍历整个磁盘然后加载内核，引导程序这个多出来的步骤也可以让你加载位于磁盘上不同位置的操作系统，以防你觉得Unix不够，好方便你更换）。<br/>
+　　内核一启动，它就会开始四处探查，以寻找其余的硬件，并为程序运行做好准备，它探查时并不是在内存中而是在I/O端口中，这些特殊的总线上很有可能会插上控制卡，这时内核探查它们并等待响应，内核并不是随机探查的，其内部会有说明应该如何、在哪里探查这些硬件以及如果这些硬件完好会如何响应，这个过程叫自动探查（autoprobing）。<br/>
+　　可能在电脑启动时这些过程你都无法在屏幕上看到。在Unix上，因为Unix操作系统用的是文本终端（test consoles），所以在操作系统启动时你可能会看到引导信息在你的屏幕上滚动，现如今，Unix将引导信息隐藏不显示在屏幕上，你可以通过组合键Ctrl+Shift+F1切换到文本控制窗口，如果想切换回来你可以试试Ctrl+Shift+F7/8/9。<br/>
+　　引导时大部分信息都是内核在通过你的I/O端口探查你的硬件时发出的，内核要弄清楚什么东西适合你的硬件并对其进行适配，Linux的内核极其擅长干这个，比大多数的Unix系统都要强，更别说DOS和Windows了，实际上，大多数Linux的资深用户都觉得Linux在这方面的出彩，使得其在一众免费的类Unix实验包中脱颖而出且吸引了大量重要用户的原因。<br/>
+　　但是让内核加载且运行起来并不意味着引导过程的结束，这只是第一阶段（有时也被称为运行第一级），第一阶段结束后，内核会将控制权交给一个叫“init”的特殊进程，其还会产生几个内部管理进程（最近的一些Linux系统用一个叫“upstart”的程序代替init的工作）。<br/>
+　　init进程的第一个工作就是检查以确保你的磁盘完好，磁盘的文件系统是很脆弱的，例如突然的断电或者硬件故障就会将其损坏，这就是为什么在你的Unix启动前要采取这个修复性步骤。我们之后会详细介绍为什么文件系统会出错。<br/>
+　　下一步init就会启动几个守护进程（daemon），例如像打印后台处理进程（print spooler）、邮件监听进程（mail listener）、万维网服务进程（WWW server），这些躲在后台的程序一直等待着干活，这些特殊的程序经常要协调可能互相起冲突的请求，他们之所以要在后台一直运行以让其读取计算机的所有请求是因为，如果来了一连串请求（请注意，每个进程启动时都要读取所有请求）这时候如果几个进程同时得到了运行的请求，怎么确保不让其互相干扰到呢？不同的系统启动的守护进程会有所不同，但是大多数都会有打印机后台处理进程（你打印机的看门人）<br/>
+　　接下来，init进程会为用户做好准备，init进程会运行一个名叫getty的程序副本以监视你的键盘和屏幕（也许还会运行其它监视拨入串行端口的程序副本），实际情况是init进程会运行多个getty的副本以创建多个（七个或八个）虚拟终端，在某一时刻你的屏幕和键盘只会连接进其中一个，甚至你可能一个也没机会见到，因为你的那个终端可能会被另外一个叫图形接口服务（X serve）的进程接管（可能会更多）。<br/>
+　　还没完，接下来还有各种各样的守护进程用以支持连接网络或其它服务，其中最重要的就是图形接口服务，图形接口服务是一个管理你的鼠标、显示器和键盘的守护进程，它最重要的职责是生成你现在所看到的图像。<br/>
+　　当图形接口服务运行时，在这引导过程的最后部分，它会迅速地接管先前由虚拟终端控制的硬件，这时你就会看到一个名叫显示器管理程序为你生成的一个登入界面。<br/></p>
+<h2>4.当你登录系统时发生了什么？</h2>
+<p>　　当你登录系统时，实际上是电脑在验证你的身份。现在的Unix系统通常是通过图形管理进行登录，但是你还是可以通过Ctrl-Shift组合键切换到文本终端，这样的话，你会在终端上看到由getty进程所创建的程序login。<br/>
+　　通过图形界面或者通过程序login输入你的用户名和密码就可以认证你的身份，在一个名叫/etc/passwd的文件里，你可以看到已经创建了的账户的用户名。<br/>
+　　其中有些内容会进行加密，加密的是所有账户的密码（有时这些加密内容会放在另一个文件里，它位于/etc/shadow，同时还赋予了更高的访问权限）。你登陆时输入的密码也是以这种方式加密的，程序login会检查两者是否匹配，这种方法之所以安全，是因为将你输入的密码进行加密是很容易的，但是反过来进行解密却十分困难。因此就算有人看见了你的被加密数据也无法知道你的实际密码（这也意味着如果你忘记了你的密码，没有任何找回的希望，只能换个账号了）。<br/>
+　　只要你一成功登录，你就会获得与这个账号相关联的所有权限，你可能还会被预设成某个用户组（group）里。用户组是管理员提前设置好的一些用户的集合，用户组内创建者用户能获得单独为其设置的权限，一个用户在多个用户组中（想获得更多关于Unix的用户权限机制，请移步 <a href="http://en.tldp.org/HOWTO/Unix-and-Internet-Fundamentals-HOWTO/disk-layout.html#permissions">permissions</a>）。<br/>
+　　（尽管你是通过名字来区分不同的账号和用户组，但是电脑会自动将其翻译成一串数字id并储存起来，密码文件会将你的用户名与数字id匹配；位于/etc/group的文件则将用户组组名与用户组的数字id匹配，程序在处理用户和用户组时会自动翻译成数字id）<br/>
+　　你的账户（account entry）里包含了私人目录（home directory），你的Unix系统文件和个人文件都存放在那里，账号还会设置好shell，shell可以在你登录成功后解释你输入的命令。<br/>
+　　登录成功后会发生什么取决你的登录方式，如果你是通过文本终端那么将会启动shell，然后你就可以运行你想运行的程序了；如果你是通过图像管理登录，那么图形接口服务将控制你的图形界面，不管是通过菜单、图标、还是通过终端仿真程序运行的shell，和前者一样，你都可以运行程序了。<br/></p>
+<h2>5.引导结束后，你的程序是如何运行的？</h2>
+<p>　　在你运行程序之前，你可以将你的电脑视作装有各种进程的动物园，这些进程时刻待命，它们等待着事件（event）的触发，像按动键盘、移动鼠标或者从网络上传输进数据包（如果你的机器连上了网络的话）。<br/>
+　　内核也是属于这些进程，它很特殊 ，因为它控制着其它用户进程（user processes）什么时候可以运行，而且正常情况下它是唯一 一个直接与硬件进行交互的进程。实际上，用户进程如果想要获取键盘输入、在屏幕上显示、从你的磁盘读或写等操作时（除了处理内存中的数据）都要向内核发出请求。<br/>
+　　正常情况下所有的I/O端口都要经过内核，以使内核可以调度好所有的操作不让进程互相干扰到，少部分用户进程允许跳过内核，通常被授予直接访问I/O端口的权力，图形接口服务就是最常见的例子。<br/>
+　　你的程序会以两种方式运行，要么是通过图形接口服务要么是通过shell，通常是两种方式都要用到，因为你需要通过终端仿真程序（terminal emulator）模拟出一个老式的文本控制台，以提供一个可以运行程序的shell，我会讲清楚这个过程，然后我会回过头来讲当你通过桌面图标或者启动菜单运行程序时发生了什么。 <br/>	   	
+　　shell之所以叫shell是因为它隐藏并封装了操作系统的内核，内核与shell 之间通过少量的系统调用（system calls）来进行交互，这是Unix操作系统的一个重要特性，这样就会有许多不一样的shell，以适应不同的交互界面风格。<br/>
+　　通常shell会在你登录成功后显示一个提示符号”$“（除非你自己定制了shell），我们这里不会讨论shell的语法或者其它什么你在屏幕上可以轻易看到的东西，我会带你从计算机背后看看发生了什么。<br/>
+　　shell仅仅是一个用户进程，没什么特别的，它等着你的击键，监听着键盘的I/O端口（通过内核）。但内核看到你的输入后，它会将输入的文本反馈进你的虚拟终端或者由图形接口服务创建的终端仿真程序，当内核看到“Enter”时，它会将你的那行文本传递给shell，随后shell会尝试将其解释成指令。<br/>
+　　当我们打出“ls”然后按下Enter来调用Unix目录时，shell就会将其视作内置命令然后知道你要运行位于文件/bin/ls的可执行命令文件，这个命令让系统调用要求内核，让内核把/bin/ls作为子进程（child process）启动并让其通过内核与屏幕和键盘进行交互，然后shell进入睡眠状态，等待ls结束。<br/>
+　　当/bin/ls结束后，它会通过发出退出的系统调用（exit system call）通知内核/bin/ls已运行结束，然后内核唤醒shell然后通知它你可以继续运行，shell随之发出一个等待文本输入的提示。<br/>
+　　当你执行“ls”时其它的程序可能也在运行，然而（我们假设你的电脑要列出的是一个很长的目录）你的电脑可能切换到另一个虚拟终端，在那里登录然后运行例如像Quake那样的游戏，或者当/bin/ls运行时收发邮件（如果连上互联网的话）<br/>
+　　当你通过图形接口服务而不是通过shell运行程序时（也就是说，通过菜单中启动应用程序，或者是双击桌面图标），任何通过图形接口服务启动的程序与shell启动程序机制是一样的，这里我将略去细节因为它们变化多端且不是很重要，关键的是，图形接口服务不像shell，图形接口服务不会在程序运行时休眠，相反，它位于你与程序之间，不断将你的鼠标与按键输入传递给程序，以满足驱动屏幕上像素点不停变化的程序的请求。</p>
+<h2>6.输入设备与中断机制是是如何工作的？</h2>
+<p>　　你的键盘是一个非常简单的输入设备，因为相比于计算机来说键盘生成数据的速度太慢了，当你按下或者松开一个键时，这个事件信号通过电线传输，然后引起一次硬件中断（hardware interrupt）<br/>
+　　监视类似事件所引起的中断是操作系统的工作，对于每个这类的中断都会有一个中断处理程序（interrupt handler），它们会隐藏通过这类事件所产生的所有数据（就像键盘的按下与松开事件）直到它们能被完整的处理为止。<br/>
+　　对于键盘来说，中断处理程序会将你的键入值放入靠近内存底部的系统区域，它在那儿时刻待命，就等着操作系统将键入数据的控制权交给需要读取键盘输入的程序。<br/>
+　　更为复杂的输入设备像磁盘、网卡都是这种工作方式，先前，我提到磁盘控制器是通过总线发出数据已被读取的信号。更为准确的说法是，磁盘引起了一个中断，随后磁盘中断处理程序会将被处理器索取的程序复制进内存中，以便发出请求的程序使用。<br/>
+　　每一个中断都有一个优先级，低优先级（就像键盘事件）必须等高优先级（就像时钟计时事件和磁盘事件），Unix被设计成会把需要立即执行的进程设为高优先级，这样机器运行起来更为顺畅。
+　　在你的系统引导信息里。你可能会注意到带有IRQ序号的信息，你还可能知道到一种常见的错误配置硬件的做法，就是将两个不同的设备共享了一个IRQ序号，然而不知道这是为什么。<br/>
+　　我来给你解释，IRQ是“ Interrupt Request”（中断请求）的缩写，操作系统在启动时需要弄清楚每个设备需要用哪些编号的中断，这样他就能将正确的中断处理程序对应上，如果两个不同的设备共用一个IQR，中断时就会分配错误的中断处理程序，这至少会导致设备锁死无法使用，有时甚至会造成系统严重混乱从而导致系统假死或者崩溃。<br/></p>
+<h2>7.我的电脑如何同时做好几件事？</h2>
+<p>　　电脑实际上没有这个能力，电脑在某一时刻只能处理一个任务（或进程），但是电脑能很快地在任务间切换，所以它迷惑了反应很慢的人类，让你觉得它同时做好几件事，这就是分时操作系统（time-sharing）的由来。<br/>
+　　内核众多的工作之一就是管理这个分时机制，内核中有一个调度程序（scheduler），它能将你动物园里的所有进程信息（非内核的）保存下来，每六十分之一秒，内核中的计时器（timer）就会关闭一次并产生一次时钟中断，调度程序就会将任何正在运行的程序暂停下来，然后将控制权交给另一个进程。<br/>
+　　六十分之一秒听起来是个很短的时间，但是对于现在的微型处理器，这足够运行成千上万条机器指令，这足够完成很多工作，所以就算你有很多进程，每个进程也能在其时间段内完成很多的工作。<br/>
+　　事实上，一个程序可能无法在整个时间段中运行，如果从I/O设备中传来了一个中断，内核会有效地暂停当前任务以运行中断处理程序，然后继续运行被暂停的任务。大量的高优先级中断会挤压正常运行的进程，这种非正常操作叫做抖动（trashing），幸运的是现如今的Unix系统很难发生这种情况。<br/>
+　　实际上，一个程序运行的速度很少会因为其获得的时间片段的多少而被限制（这里有一些例外，例如声音和3D图像的生成），更常见的是因为等待磁盘数据和网络连接而产生的延慢。<br/>
+　　操作系统在通常情况下能支持多任务处理，我们称之为多任务处理（multitasking），Unix家族的操作系统就是为多任务处理而设计的，并且设计的很好，比Windows和Mac OS高效很多，他们都是之后才加上去的，并且做得非常差。高效、可靠的多任务处理是Linux在网络、通信和网络服务如此出色的原因。<br/></p>
+<h2>8.我的计算机是如何不让进程们互相干扰的？</h2>
+<p>　　内核中的调度程序负责将不同的程序及时分开，但你的操作系统也会在内存中将它们分开，所以每个进程都会在自己的内存空间中工作从而不互相干扰。甚至如果你希望你的所有程序都能互相协作，并且不希望其中一个程序的bug干扰到其它程序，你就需要操作系统中的一个叫内存管理（memory management）的东西。<br/>
+　　你动物园你的每个进程都需要一份专属的内存空间，这份空间用来存储变量和运行结果，进程可以看成由只读代码段（保护进程运行指令）和可写数据段（存储了进程产生的所有变量）组成，每个进程的可写数据段都是独一无二的，但是如果两个进程运行了同一个代码，Unix会自动采取更有效的方法使两个进程共享一个代码段。<br/></p>
+<h3>8.1虚拟内存（简化）</h3>
+<p>　　效率很重要，因为内存很贵，有时你都会没有足够的内存来支撑机器运行所有的程序，尤其是当你用像图形接口服务这样的程序时，为了避免发生这种情况，Unix会用一个叫虚拟内存的技术，这种技术就不需要将进程的所有数据段与代码段都存入内存中，相反，内存中只会存入一个较小的工作区，进程的其余段将会存在你硬盘上的一个叫做交换空间（swap space）的特殊区域。<br/>
+　　注意在过去，上段中的“有时”就是“所有时刻”——内存的大小相比于运行程序所需的大小要小很多，所以交换是很频繁的，现在的内存远没有当时那么贵了，哪怕是低配的机器都有足够多的内存，对于一个有64MB内存的现代的单用户机器就已经可以运行图形接口服务和一系列典型的程序了，而且是一开始就加载进内存中连交换都不需要。</p>
+<h3>8.2虚拟内存（详细）</h3>
+<p>　　事实上，上面说的有点简单了，是的，程序会将你的内存视作一个存储地址的大银行，这个地址的范围可以比你实际内存——物理内存（physicalmemory）大很多，磁盘交换技术（disk swapping）就是实现这种现象的，但是基于你的硬件至少会有五种不同类型的内存，当程序需要很高的读写速度时，不同内存的差异非常重要，要知道在你的计算机上发生了什么，你就得知道它们的工作原理。<br/>
+　　五种不同的内存有：处理器寄存器、内部（或芯片内）缓存、外部（或芯片外）缓存、主存、磁盘。之所以会有这么多种类原因很简单：要速度就要多花钱。我所列出的内存按照按存取时间升序和单位成本降序排列的。处理器寄存器最快也最贵，它能在一秒内随机存取（random　access）十亿次；而且磁盘最慢也最便宜，一秒钟大概随机存取100次。<br/>
+　　下面列出了2000年初典型桌面级计算机不同内存的读取速度，尽管速度和容量会增加价格会下降，但是你可以认为不同内存参数的比值是不会变的——正是这种比率塑造了分级存储体系。</p>
+<pre>
+磁盘		容量:13000MB	读写速度:100KB/Sec
+主存		容量:256MB	读写速度:100M/Sec
+外部缓存	容量:512KB	读写速度:250M/Sec
+内被缓存	容量:32KB	读写速度:500M/Sec
+处理器		容量:28bytes	读写速度：1000M/Sec</pre>
+<p>　　我们不能只用速度最快的内存，这样太过于昂贵了——即使没那么贵，快速内存也是不稳定的，也就是说当电源关闭时就会丢失掉数据，所以计算机不得不使用硬盘或者其它稳定的存储介质，这样就算电源关闭时也能将数据保存下来。处理器与硬盘间有着巨大的速度差异，分级存储体系的中间三层（主存、外部缓存、内部缓存）就用来填补这个巨大的差距。<br/>
+　　类Unix和Linux都有一个共同的特点叫做虚拟内存，这让操作系统表现的就像它有比实际主存有更多的存储空间，你的物理主存可以看作在更大容量的虚拟内存中的一些窗口或者高速缓存，在任意给定时间里，数据实际上是存储在磁盘上一个叫交换空间的地方，在程序的背后，操作系统将数据块（也就是“页面/pages“）在主存与磁盘间不断移动以维持这种更大内存的假象，结果就是你的虚拟内存更大了而速度并没有比真的内存慢很多。<br/>
+　　比物理内存具体要慢多少取决于操作系统的交换算法与程序对虚拟内存的读取方式有多匹配，幸运的是，在时间上靠近的读写操作，在内存空间里也趋于集中，这种趋向性被称为局部性（locality），或者更为正式的叫做访问局部性（locality of reference）——这是好事，如果对内存的访问要在虚拟内存空间里到处跳转，对每一个新访问来说，你实际上是在做磁盘读写，这样虚拟内存的读取速度就和磁盘一样慢了，但是正因为程序展现出很强的局部性，你的操作系统对程序的每一个访问只需要执行很少的交换。<br/>
+　　经验发现最高效的内存使用方式也是最简单的，它叫做LRU或者最近最少使用（least recently used）算法，虚拟内存会根据需要将磁盘中的数据块放入其工作区内，当物理内存被工作区占满时，它会将最近的最少使用的数据块置换（dump）出去，所有的类Unix和其它支持虚拟内存的操作系统都是基于LRU算法。<br/>
+　　虚拟内存是是填补磁盘和处理器速度差距的第一层，它直接由操作系统管理，但在物理主存与处理器中的寄存器读取速度仍有很大差距，这时候外部缓存和内部缓存就用我刚刚提到的一种相类似的虚拟内存技术来解决这个问题。<br/>
+　　就像物理主存可以视作磁盘交换区里的一些窗口和高速缓存一样，外部缓存也可以视作主存上的窗口。外部缓存更快（一个250M每秒，一个100M每秒）而且更小，硬件（特别是计算机的内存控制器）对从主存中获取的数据块的外部缓存也使用LRU算法，出于历史原因，缓存中交换数据的最小单元被称为行（line）而不是页面。<br/>
+　　但是我们还没完，通过缓存中的外部缓存提升速度后，内部缓存是我们最后能提升效率和速度的了，它比外部缓存更小也更快——实际上它就在处理芯片的旁边。<br/>
+　　如果你想让你的程序真正的快起来，知道一些细节也是有用的。你的程序如果有很强的局部性，那么就可以运行地很快，因为这使得缓存可以很好的工作，最简单变快的方法就是让程序变小。如果程序不会因过多的磁盘I/O接口或者等待网络事件而变慢，那么它就可以以缓存的速度在缓存中一样运行。<br/>
+　　如果你不能让你的整个程序变小，调整程序的关键部分的速度以使程序有更强的局部性也可以有同样的效果，关于如何调整的细节已经超出了这个教程的范围，当你需要这个的的时候你已经对编译足够熟悉了，你也就可以自己找到你想要的东西了。</p>
+<h3>8.3内存管理单元</h3>
+<p>　　就算你有足够多的芯片，多到不需要用置换技术了，操作系统中的内存管理（The Memory Management ）仍然有很多工作要做，它能确保程序只修改它自己的数据——这样就可以阻止带有错误和恶意代码的程序搞乱另一个程序的数据，为了做到这一点，内存管理会生成一个数据段和代码段的匹配表，每当一个进程请求更多内存或释放内存时（后者通常发生在进程结束时）这个表都会实时更新。<br/>
+　　这个表用于传递命令给一个叫MMU或者内存管理单元（memory management unit）的底层硬件，现代处理芯片都内置了MMUs，MMU有一种给内存各个区域加篱笆的能力，所以一个越界的访问请求会被拒绝然后造成一次特殊的中断。<br/>
+　　如果你在Unix上看到”Segmentation fault“、”core dumped”“或者类似的东西，实际发生的是：一个程序访问的内存（core）超过了它那个段的篱笆，从而产生了一次错误，这意味着程序代码里bug，”core dump“意味着系统留下了错误日志来帮助程序员弄清发生了什么。<br/>
+　　要阻止进程间的相互干扰除了将内存进行分段式访问外还有其它要做的，你还想控制你文件的访问权限，这样当恶意和有缺陷的程序时不至于使你的操作系统的关键部分崩溃，这就是我之后会讨论的为什么Unix有文件权限。</p>
+<h2>9.我的电脑是如何在内存中存储数据的？</h2>
+<p>　　你大概知道电脑上所有的数据都是以一连串比特（binary digit简称bit）存储的（它们是二进制数 ，你可以将它们视作一些小的开关），这一节我会解释这些比特（或称作位）是如何表示你计算机中的字母和数字的。<br/>
+　　在解释之前你需要知道字长（word size）是什么意思，字长是你的计算机在移动数据单元时首选的数据单元大小，更准确的说法是你处理器中的寄存器的大小，寄存器就是你的处理器进行算术和逻辑运算的地方，当人们说计算机是多少位（例如“32位”“64位”）时，就是指的这个。<br/>
+　　现在的电脑大多数都是64位，早些年（2000初）大多数计算机都是32位，1980年的286型机器是16位的，老式的大型机通常是36位。<br/>
+　　你的电脑会将你的内存看作是由一系列字（words）的组成，字的编号由0一直到某个数（基于你的内存大小），同时也受限于你计算机的字长，这就是为什么一些程序在老式的计算机上，像286这种，需要花费大量时间去处理内存中的大量空间，我不会这里描述这些东西，但这仍是老程序员的噩梦。<br/>
+ ### 9.1.数 ###
+　　整数可以由字或一对字来表示，这个取决与你处理器的字长，64位的字长是最为普遍表示整数的方式。<br/>
+　　整数的运算也是差不多但是底数并不是二（以2为底无法表示负数——译者注），字的最低的位可以表示1，第二位表示2，下一位表示4，在二进制下可以以此类推，但是带符号的整数是用字的二进制补码（twos-complement）形式表示的，最高位是符号位，为了使每个正数都有相应的负数，所有的负数都可以由相应的正数变换而来，将正数的二进制形式上的每个位取反然后整体加1，这就是为什么64位的字表示的整数范围是-263 到263 - 1，第六十四个位用来表示符号，0表示正数或者0，1表示负号。<br/>
+　　一些计算机语言可以让你进行无符号的运算，这样就可以直接以2为底数来表示所有的整数和零。<br/>
+　　大多数处理器和一些语言都能对浮点数进行运算（这种能力现如今已经内置进了所有处理器芯片中）。浮点数相比于整数有了更大的取值范围，还可以用来表示分数，具体的实现方法各种各样，也比较复杂，不好在这里展开，但是大体上的思想和科学计数法很相似，一个数比如说1.234 * 1023，可以分成尾数部分（1.234）和指数部分（23）表示乘了23次10（意味着这个数乘出来会有20个0，23减去小数部分的3个数）。<br/></p>
+<h3>9.2.字符</h3>
+<p>　　字符通常由ASCII（American Standard Code for Information Interchange）表示，每个ASCII码通常有七个位，在现代机器上，128个ASCII码中的每一个码都是比八位位组（octet）低一位的7位或者8位的字节（byte），八位的字节放入64位机器的内存中时，例如一个由6个字符组成的字符串只占用内存中的一个字。想要获得ASCII码的详细图标，在Unix上提示符后打出“man 7 ASCII”即可。<br/>
+　　上一段有两个点比较误导人，第一个是计算机术语八位位组的使用是完全正确的，但是很少使用，更多的是用字节这个词来表示八位位组，这里假定了字节具有和八位位组一样的八位长度。严格的来说，“字节”这个术语表示的范围更大，例如说，以前的机器就有36位的，我们会说它的一字节有9位（尽管这个机器不可能再有了）。<br/>
+　　更重要的是，并不是所有的人都用ASCII，事实上，世界上的大多数人都不能使用ASCII，尽管ASCII对美式英语很友好，但是对使用其它语言的用户来说，就会缺少重音符号和其它特殊的字符，甚至在英式英语中，要打出个英镑的标志都是个问题。<br/>
+　　所以就出现了好几个解决这个问题的办法，所有的方法都是使用比ASCII更多位数的字节，使ASCII位于256个字符集的下半部分，最常见的方案是“Latin-1”字符集（更正式地称为ISO 8859-1），这是Linux和老版的HTML的默认字符集，微软的X视窗系统用的版本是基于Latin-1的变体，微软的版本多添加了一些像左右双引号的字符，这些字符所添加的位置因为历史原因，相应的在Latin-1中则是空白的（因为这个所造成的麻烦，请看<a href="http://www.fourmilab.ch/webtools/demoroniser/">这里</a>）<br/>
+　　Latin-1解决了西欧的语言问题，包括了英语、法语、德语、西班牙语、意大利语、荷兰语、挪威语、瑞典语、丹麦语和冰岛语。然而，这还不够，所以就有了Latin从-2一直到9的字符集，用来解决像希腊语、阿拉伯语、希伯来语、世界语和塞尔维亚-克罗地亚语，更多细节请看IOS<a href="http://czyborra.com/charsets/iso8859.html">字母表</a>。<br/>
+　　解决这个问题的最终方案是一个叫统一字符编码（这个和ISO/IEC 10646-1:1993是一个东西）的标准（Unicode），统一字符编码的前256个字符和Latin-1是一样的，在高于16位的码里，有希腊语、、西里尔语、亚美利亚语、希伯来语、阿拉伯语、德文、孟加拉语、古吉拉特语、奥里亚语、泰米尔语、泰卢格语、坎那达语、马来亚拉姆语、泰语、老挝语、格鲁吉亚语、藏语、日文假名、整套的现代韩语字符集和一套统一的中/日/韩（CJK）表意文字，更多细节请看Unicode的<a href="http://www.unicode.org/">主页</a>，XML和XHTML就是用的这个字符集。<br/>
+　　最近的Linux版本用的统一字符编码叫做UTF-8，在UTF中，0-127就是ASCII字符集，128-255的空槽用来填充2~4字节（也就收高于16位的——译者注）编码的序列号，以识别那些非ASCII的字符。<br/></p>
+<h2>10.我的电脑是如何在硬盘上存储数据的？</h2>
+<p>　　当你在Unix下访问硬盘时，你会看到一个树状的被命名的目录和文件。通常情况下，你不需要查看比目录和文件名更深层的东西，但是当你硬盘坏掉了，想要回复数据时知道这些是很有必要的，不幸的是，没有一个好的从你们所熟知的文件层面向下描述的方式，所以我只能从硬件层向上描述了。</p>
+<h3>10.1.硬盘的底层结构与文件系统</h3>
+<p>　　数据存储在你的磁盘的盘面，每个盘面又被分成像飞镖圆靶那样——多个同心圆的磁道（track）且每个磁道像饼形图那样被分成多个扇区（sector），又因为外侧的磁道比内侧的磁道拥有更多的空间，所以外侧磁道的扇区比内测磁道的扇区要多一些，每个扇区（或者磁盘存储块/disk block）都拥有同样的容量，现代的Unix系统下通常是1KB（1024个八位的字节），每个磁盘存储块都有一个独一无二的地址或者磁盘块编号。<br/>
+　　Unix会将磁盘划分为各个磁盘分区,每个分区都是与其它分区分开的连续存储块，分区可以作为文件系统（file system）或交换空间（swap space），分区的最初原因就是为硬盘坏掉时方便修复而准备的，那时的磁盘又慢又容易出错，分区与分区间的间隔使得当你的硬盘无法访问或者被随机的坏点给弄崩溃时，可以减少故障所影响的范围。现在的硬盘更重要的是能分出只读分区（防止侵入者修改关键的文件系统）或者使用各种各样的方式通过互联网分享，我不在这仔细讲述，磁盘最低序号的分区是很特殊的，作为一个引导分区（boot partition）可以引导并启动你的内核。<br/>
+　　每个分区是一个交换空间（用来实现虚拟内存）或是一个文件系统用来存储文件，交换空间分区可被视作存储块的线性排列；文件系统，则是用的另一种方法将文件名映射到连续的存储块，因为文件会时刻变化，所以存储了文件的存储块不会是线性排列的而是散布在其分区的各个地方（这样当操作系统需要一个空闲的数据库时，它能从任何地方找到），这种分散的存储方式叫做存储残片（fragmentation）。</p>
+<h3>10.2.文件名和目录</h3>
+<p>　　对于每个文件系统，通过一个叫i-node的节点表将文件名和文件的存储块映射起来，在每个文件系统（最低序号的文件系统是用来管理和标记各个文件系统的，我不在仔细讲述）靠近”底部“（最低序号的存储块）都有很多的i-node节点，每个i-node节点写有一个文件的信息，文件的存储块部分（包括目录部分）则在这些i-node节点的上方（更高序号的存储块）<br/>
+　　每个i-node节点都包含了一个文件的存储块的所有序号，（这样说并不全对，仅仅只对小文件来说，但是其它的细节在这里并不重要），注意i-node节点并不包含文件的名字。<br/>
+　　文件的名字都在目录结构里，目录只做将文件名映射到i-node节点序号的工作，这就是为什么Unix中的一个文件能有好几个文件名（或硬链接/hard links），因为它们只是目录中多个指向同一i-node节点的同一项而已。</p>
+<h3>10.3.挂载点</h3>
+<p>　　一种最简单的情况，你Unix的整个文件系统都在一个磁盘分区中，虽然你在一些小型的个人Unix系统可以看到这种情况，但是并不普遍，更普遍的是会分布在多个分区上，或者还可能是不同的磁盘。所以你的电脑最有可能会有一个小分区存放内核 ，大一点的分区存放操作系统的应用程序，更大的分区存放用户的主目录。<br/>
+　　当你的操作系统引导完毕时，你能立即访问的分区只有根分区（也是你引导时所在的分区），它保存了文件系统的根目录，所有的文件都要挂载在它下面。<br/>
+　　所有的其它分区都必须附着在根分区上，这样才能访问其它的各类分区的文件系统，在启动的中途，根分区会将其它分区都挂载在根分区中的一个目录上，这样就使那些根分区以外的分区变得可访问 。<br/>
+　　例如，Unix中一个叫/usr的目录，可能就是挂载在某个分区上，这个目录可能包含了很多在你引导操作系统时不需要的程序。</p>
+<h3>10.4.如何查找文件</h3>
+<p>　　现在在文件系统中，我们可以从上往下看了，接下来会讨论当你打开一个文件时发生了什么（例如，/home/esr/WWW/ldp/fundamentals.xml）。<br/>
+　　内核会从Unix文件系统的根目录（在你的根分区）开始，在那里会寻找一个叫“home”的目录，通常来说“home”是一个大的用户分区的挂载点，所以它会去那里找，在用户分区的顶层目录里，它会找一个叫“esr”的条目然后提取出一个i-node序号，它就会去这个序号所对应的i-node节点，然后发现其所关联的存储块是一个目录，然后在其中找到了”WWW”继续用它的i-node序号找到了对应子目录里的“ldp”，这个文件名又引向了另一个目录，然后打开这个目录，在这个目录里找到了“fundamentals.xml”和对应的i-node序列号，这个i-node指向的就不是目录了，而是一个存储了文件的存储块集合。<br/></p>
+<h3>10.5.文件的所有权、权限和安全</h3>
+<p>　　为了防止程序意外地或恶意地对数据进行一些它们本不应该进行的操作，于是Unix带有了权限特性，再过去昂贵的共享小型机上，Unix的权限特性最开始是用来保护同一台机器上的不同用户的。<br/>
+　　为了理解文件权限，你需要回顾第四节当你登录系统时发生了什么？，每个文件都有一个创建者用户和一个创建者用户组（owing group），它们都是由文件的创建者给初始化的，可以通过程序命令chown（1）和chgrp（1）来修改。<br/>
+　　文件的基本权限分为读（允许从文件读取数据）、写（允许修改文件）和执行（允许将文件作为程序运行），每个文件都有三种权限，一种属于创建者用户，一种属于创建者用户组中的所有用户，还有一种是属于所有其它用户的，当你登陆时，你所能读、写或执行的文件，是文件权限位（permission bits）上的权限已经和你的用户ID匹配上了的，或是你所在用户组中的文件，还或者是全世界人都可以访问的文件。<br/>
+　　为了了解这些东西是如何交互、Unix系统是如何展示的，让我们假设在Unix上列出一些文件，下面就是：</p>
+<pre>snark:~$ ls -l notes
+-rw-r--r--   
+1 esr users 2993 Jun 17 11:00 notes</pre>
+<p>　　这是一个普通带有数据的文件，这个表单告诉我们它被用户“esr”所创建和拥有，同时这个用户还在一个叫“usrs”的创建者用户组。可能默认情况下，系统不会把每个普通用户都放在这个组中，其它组名在分时系统的机器上还有“staff”、“admin”或者“wheel”（显而易见的原因，用户组在单用户工作站或个人计算机上不是很重要），你的Unix可能会用一个默认的用户组，名字可能就是你的用户ID。<br/>
+　　“-rw-r--r--”代表了这个文件的三个权限位（rw-，r--，r--，——译者注），第一个破折号是目录位，如果文件是一个目录则会显示“d”，如果是一个符号链接（symbolic link）则会显示“l”。“-rw-r--r--”的第一位是用户的权限、第二位是用户组的权限，第三位是其它所有的用户都可以具有的权限（通常叫做全局权限/world permissions），在这个文件中，文件的创建者用户“esr”可能对文件进行读写操作，而在“users”用户组中的人可能只会读文件，世界上其它的用户可能只能读这个文件。这是一种很典型的文件权限设置。<br/>
+　　接下来让我们来看看一个非常不一样的文件权限设置，这个文件是GCC（GNU C compiler，即GNU C编译器）。</p>
+<pre>snark:~$ ls -l /usr/bin/gcc
+-rwxr-xr-x   3 root    
+  bin         64796 Mar 21 16:41 /usr/bin/gcc</pre>
+<p>　　这个文件属于一个叫“root”的用户和一个叫“bin”的用户组，它只能被root进行写操作（修改），但是可以被任何人读取或者执行。这是系统里预装程序的一种常见所有权设置和文件权限设置，“bin”用户组在一些Unix系统上也可以看到，这个用户组用来把那些系统程序统一起来（这个名字是历史遗留的，是“binary”的缩写），你的Unix也可能“root”用户组（与”root”用户不是同一个东西）。<br/>
+　　“root”是数字ID“0”用户常见的用户名，它的权力可以高于一切用户，root权限很有用但也是很危险的，一种典型的例子是，在root用户下，你可能对关键的系统文件执行了某些普通用户不能执行的命令，以至于文件受损。<br/>
+　　因为root账户的权限太大了，使用这个账户时要格外小心，你的root账户密码是你系统上所有安全信息中最重要的东西，没有之一，这是任何一个骇客和侵入者都想要到得到的东西。<br/>
+　　关于密码：千万不要将密码写在任何地方或设置一个很容易猜到的密码，例如你男朋友/女朋友/配偶的姓，这种普遍到惊人的坏习惯让骇客一直有机可乘，通常也不要从字典中选词作密码，有一个叫字典解密（dictionary crackers）的程序，会通过常见单词表寻找那些可能的密码，一个不错的方法是将单词和其它数字组合起来。<br/>　　例如“shark6cider”或”jump3joy”这会使字典解密程序要解出的可能密码组合太多。不要用我提到的那两个密码，骇客可能认为有人读了这个文档，然后将它两放进密码字典里。<br/>
+　　接下来看看第三个示例：</p>
+<pre>snark:~$ ls -ld ~
+drwxr-xr-x  89 esr     
+  users          9216 Jun 27 11:29 /home2/esr
+snark:~$</pre>
+<p>　　这个文件是一个目录（注意权限说明那部分的第一个字母“d”），我可以看到它只能被esr用户进行写操作，但是可以被任何人执行。<br/>
+　　读权限能让你列出目录，也就是说能看到目录中所有文件和其它的目录的名字。写权限能让你创建或者删除目录中的文件。如果你记得目录中各个文件的名字和子目录名字的话，那么这些规则是有意义的。<br/>
+　　目录的执行权限意味着你能直接打开目录下的文件和它的子目录，实际上，它给你了直接访问目录中i-node节点的权限，完全关闭一个目录的执行权限，这个目录将变得毫无用处。<br/>
+　　偶尔你会看到目录虽然全局可执行，但不会全局可读，这意味着某个用户想要执行某个特定的文件，用户自己必须知道这个文件的完整名字（目录不会列出文件，因为没有读权限——译者注）。<br/>
+　　文件与目录上的读、写、执行权限是相互独立的，这一点非常重要。特别是一个目录上的写权限意味着你可以创建或修改那里的文件，但不意味着会自动把你送到那个目录下。<br/>
+　　最后我们来看一个登录程序文件的权限设定：</p>
+<pre>snark:~$ ls -l /bin/login
+-rwsr-xr-x   1 root    
+  bin         20164 Apr 17 12:57 /bin/login</pre>
+<p>　　这和我们对系统程序的权限设定所想的一样，除了创建者用户权限下的那个“s”，这里应该是创建者用户可执行权限位“x”。其实这是一种特殊的叫“set-user-id”权限或者setuid权限位（setuid bit）<br/>
+　　setuid权限通常会给普通用户root权限，这样普通用户就可以运行需要root权限的文件，不过是以种可控的形式，当在某个可执行程序上设置这个时，不管这个程序文件的创建者用户和正在使用的用户是否匹配，该用户都会获得该文件创建者用户的权限。<br/>
+　　和root账号一样，setuid程序很有用但也很危险，任何人在root账号下都可以修改或破坏setuid程序，然后直接用这个程序设置出一个具有root权限的shell，因为这个原因，在Unix上读写完一个文件后，在文件关闭时会自动关掉setuid位，很多针对Unix的侵入者都希望恶意利用setuid程序上的bug以破坏程序，所以那些安全意识强的系统管理员格外注意setuid程序，很不情愿安装新版本的setuid程序。<br/>
+　　在上面谈论权限系统时，有些重要的东西被我略过了，就是当用户创建文件或目录时，用户的权限和用户组是如何分配的，用户组很难说，因为用户可能同时属于好几个用户组，但是其中有个默认的组（在用户的/etc/passwd条目下说明），用户创建的文件通常也属于那个默认组。<br/>
+　　初始化权限设定的过程也有点复杂，程序创建的文件通常一开始就被程序给设定好，但是这些会被用户环境中一个叫掩码（umask）的变量修改，掩码会定义当文件创建时哪个权限位应该关闭，大多数系统上最常见的掩码值是-------w-或者002，也就是关闭全局写权限，更多关于umask的命令，你可以去看你的shell上的帮助手册。<br/>
+　　初始化目录的用户组也有点复杂，在一些Unix系统下，一个新目录的用户组也是创建者的用户组（在System V的规则下），另一方面，一个新目录的用户组也是其父目录的用户组（在BSD的规则下）。在一些现代Unix系统上，包括Linux，后一种设定可在目录上的set-group-ID选上（chmod g+s）。</p>
+<h3>10.6.一些糟糕的情况</h3>
+<p>　　上文就有暗示，文件系统是很脆弱的，现在我们知道，找你的文件就像跳房子游戏一样，只不过跳的是任意长度的目录和i-node节点，现在如果假设你的硬盘出现了一个坏点会怎么样？<br/>
+　　如果你足够幸运，这可能只会废掉一些文件数据，如果不幸的话，它会毁掉你的目录结构或者i-node节点，让你的系统的某些子项没处挂载，更糟的情况是如果毁掉的是指向多个文件存储块或者是指向多个i-node节点的特殊数据，这种损坏会因为对文件的普通操作而扩散，损坏那些原本没有被坏点影响的文件。<br/>
+　　幸运的是，这种偶发情况因为硬盘变得越来越稳定而少见，但是你的Unix还是会进行文件系统完整性的定期检测以确认没有出什么差错，现代Unix系统会在启动时间对每个分区做一个完整性检测，就是在挂载之前，每重启几次它都会花一个较长的时间做一个完全检测。<br/>
+　　这些东西听起来让Unix有点复杂的过分了，而且看似很容易出错，但是当你听到这些启动检测是确保普通的问题在变成灾难前能被发现和纠正时，可能会让你稍微安心点，有些操作系统都没有这些设置，就是为了让你启动时间快那么一点，这还可能让你在手动恢复时陷入更大的麻烦（这还得假设你有一个诺顿计算机医生的备份或者其它什么恢复软件的备份）<br/>
+　　现代的Unix设计趋势是日志式文件系统（journaling file systems），这类系统的数据存取方式会让磁盘处于一种比较稳定的状态，这样当系统出问题时可以被修复，这也会大大加快启动时的完整性检测。</p>
+<h2>11.计算机语言是如何工作的？</h2>
+<p>　　我们在第五节已经讨论过了程序的运行，每个程序本质是执行一连串的字节流（stream of bytes），这些字节流就是计算机的机器语言中的指令（instruction）。但是人类不太容易处理机器语言，直接处理机器语言的行为十分罕见，甚至在黑客群体里都被视为一种另类。<br/>
+　　几乎Unix的所有代码除了内核里少量支持硬件接口的代码外几乎都是由高级语言编写（之所以叫高级，在以前是用来于低级（low-level）的汇编语言区分开来，汇编语言是机器语言基础的封装）<br/>
+　　高级语言不止一种，为了让你更好理解，你需要记住一个程序的源代码（source code，由人编写，可以编辑的）必须经过某些方法变成计算机能运行的机器码（即机器语言——译者注）。</p>
+<h3>11.1.编译型语言</h3>
+<p>　　最常见的语言类型就是编译型语言，编译型语言直接由一个叫编译器（compiler）的（逻辑上的）程序将源代码直接翻译成可直接运行的二进制机器码，一但二进制文件生成，你就不需要源代码就可以直接运行程序（大多数软件都是在源代码生成的二进制文件上运行的，所以你看不到源代码）。<br/>
+　　编译型语言倾向于提供更高的性能以及与底层系统最直接的接触，但是编程难度也很高。<br/>
+　　C语言，Unix就是由这个语言所编写，也是目前为止最重要的语言（包括它的变体C++）。FORTRAN也是编译型语言，主要在工程师和科学家之间使用，但是它的历史要长的多，也更原始。在Unix世界里没有其它的主流编译型语言了，这之外就是广泛用于金融和商业软件的COBOL了。<br/>
+　　曾经是有很多的编译型语言的，但是其中大多数要么已经消失要么只用于某些特定的研究领域，如果你是一个Unix开发者，使用的语言极可能就是C/C++。</p>
+<h3>11.2.解释型语言</h3>
+<p>　　一种解释型语言依赖于解释器（interpreter）的时时计算和对系统的调用将源代码进行翻译，源代码每次运行前都需要解释器进行翻译。<br/>
+　　解释型语言比编译型语言更慢，通常对底层系统和硬件的接触更少，另一方面编程难度也很低而且比编译型语言的容错率更高。<br/>
+　　很多Unix小程序，包括shell、bc（1）、sed（1）和awk（1）都是高效率的小解释型语言。BASICs通常也需要解释器，TCL也是。历史上最重要的解释型语言就是LISP（很多解释型语言都是基于它的改进版）。现如今，Unix的shell和Emacs上的Lisp可能是最重要和最存粹的解释型语言了。</p>
+<h3>11.3.P-code语言</h3>
+<p>　　从1990年开始，一种既有编译特性又有解释特性的语言变得越来越重要，P-code语言在将源代码翻译成你所真正执行的紧凑的二进制代码上很像，但是那个被翻译出来的并不是机器码，而是伪码（pseudocode或者p-code）,一种比机器语言更简洁而且更强大的代码，当你运行程序时你的解释器解释的是伪码。<br/>
+　　伪码几乎和二进制代码运行速度一样快（伪码解释器可以很小、很简洁而且很快），而且P-code语言在好的解释器下可以很灵活、很强大。<br/>
+　　比较重要的P-code语言有Python、Perl和Java。</p>
+<h2>12.互联网是如何工作的？</h2>
+<p>　　为了帮助你理解互联网的工作原理，我们通过一个典型的互联网操作——来看看背后发生了什么，这个操作就是将浏览器定向到了Linux文件工程（Linux Documentation Project）网站主页上的某个文档前，这个文档是：</p>
+<pre><code>http://www.tldp.org/HOWTO/Unix-and-Internet-Fundamentals-HOWTO/index.html
+</code></pre>
+
+<p>　　这个网址的意思是，这个文档在万维网（World Wide Web）下www.tldp.org网站的导出目录HOWTO/Unix-and-Internet-Fundamentals-HOWTO/index.html中。</p>
+<h3>12.1.网站名和地址</h3>
+<p>　　在这个操作下，你的浏览器第一步要做的就是与文档所在的计算机建立连接，为了实现这一步，它必须找到主机（host machine/network host）www.tldp.org的网络地址（www.tldp.org是一个典型的主机名），主机名对应的地址应该是一串叫做IP地址（IP address）的数字（IP的部分后面会解释）。<br/>
+　　为了得到相应的网络地址，它会向一个叫做名称服务器（name serve）的程序发送请求，名称服务器可能在你的计算机上，但是它更有可能是运行在与你对话的服务器主机上，当你和一个ISP签约时，安装过程可能就包含为你的互联网程序设置好ISP名称服务器里的IP地址。<br/>
+　　不同的计算机上的名称服务器会互相对话、交换信息以保证信息一直在更新，这些信息都是解析主机名（将主机名和IP地址相对应）所需要的，你的名称服务器可能在解析www.tldp.org的时候可能在好几个不同的网站上进行查询，但是这个过程很快（不会超过一秒），下一部分我们可以更深入的了解名称服务器。<br/>
+　　名称服务器会告诉你的浏览器www.tldp.org的IP地址是152.19.254.81.有了这个计算机就可以和www.tldp.org的主机直接交换数据。</p>
+<h3>12.2.域名系统</h3>
+<p>　　整个互联网所有用来将主机名翻译成IP地址的数据库和程序被称为“DNS”（Domain Name System），但你看到“DNS serve”时，那个就是我们刚刚提到的名称服务器，接下来我和你解释者整个系统是如何工作的。<br/>
+　　互联网上的主机名由被点分隔的部分组成，一个域名就是使用相同分隔部分组成的主机集合，域名也可以存在于另一域名中，例如主机www.tldp.org的域名tldp.org是.org的子域名。<br/>
+　　每个域名都需要一个权威域名服务器（authoritative name serve）赋予意义，权威域名服务器知道域名中主机的IP地址，权威（或称“主”/primary）域名服务器可能需要一个备份。以防权威域名服务器宕机，如果你看到“次级域名服务器”（secondary name serve）或“次级 DNS”，这个就是用来以防万一的，次级域名服务器就是从主域名服务器那儿每隔几小时更新一遍数据，所以一旦主域名服务器上有主机名-IP地址映射改变，那将会自动扩散开来。<br/>
+　　比较重要的点是，一个域名的域名服务器不需要知道除这个域名外其它域名中主机的地址（包括它们的子域名），一个域名服务器只需要知道其它的域名服务器的地址，在上个例子中.org的主域名服务器只用知道.tldp.org的域名服务器的地址，不需要知道所有tldp.org下所有主机的地址。<br/>
+　　域名系统中的所有域名就像一个反过来的树，顶部是根域名服务器，所有人都知道根域名服务器的IP地址，它们都会连接到你的DNS软件中，根域名服务器知道那些顶级域名服务器的IP地址，像.com和.org，但不知道这些域名中主机的地址，每个顶级域名服务器都知道它的下一级域名的域名服务器地址，然后一直这样下去。<br/>
+　　DNS是经过精心设计的，每个计算机只需要少量的信息就能获取它想得的主机地址，每一个本地的改变都可以通过改变主域名服务器数据库中一个主机名与IP的映射来实现。<br/>
+　　当你请求获得www.tldp.org的IP地址时，整个过程是这样的：首先你的域名服务器询问根域名服务器那里可以找到.org的域名服务器，知道之后，继续问.org的域名服务器那里可以找到.tldp.org的域名服务器，找到之后就会向.tldp.org的域名服务器询问www.tldp.org的主机地址。<br/>
+　　大多数时候你的域名服务器没必要这么辛苦，域名服务器会有很多缓存，当你解析一个域名时，它将其解析出的IP地址保存在内存中一段时间，这就是为什么，当你浏览一个全新的网站时，你的浏览器上看到的第一条信息就是“查找主机”。你的主机名地址映射总是会过期的，这时你的域名系统会重新请求一次——这很重要，因为这样你就不会因为主机名改变了地址而获取不到信息导致浏览器一直处于挂起状态，当旧的主机地址变得无法访问时，缓存的此主机IP地址也会丢弃掉。</p>
+<h3>12.3.路由和数据包</h3>
+<p>　　浏览器想做的是向www.tldp.com上的网页服务器（Web serve）发送一条命令，就像下面这样。</p>
+<pre><code>GET /LDP/HOWTO/Fundamentals.html HTTP/1.0
+</code></pre>
+
+<p>　　下面就来说说发生了什么，这个命令被装进一个数据包中，像电报那样不过是由比特构成的，其中装有三个重要的信息：源地址（source address）、目标地址（destination address）和服务号或端口号（server number/port number），这是标准的万维网请求方式。<br/>
+　　你计算机会将数据包沿着线（和ISP连着的线或局域网的线）直到它到了一个特殊的叫路由的机器，路由中的内存中带有一张互联网地图——不一定是整个互联网，但是会是由你的网络邻居组成的互联网，这个地图会告诉你的互联网邻居如何到达路由。<br/>
+　　你的数据包可能会经过好几个路由才能到达目的地，路由很聪明，它会记下其它路由接受数据包的时间，然后会用这些信息让数据包的传输尽可能快，还会用这些信息留意哪些路由（也可是电线）掉线了，然后会尽可能找到一个路由替补上来。<br/>
+　　有个都市传说说互联网是为核战争准备的，这不是真的，但是互联网确实很擅长在不稳定的世界里和脆弱的硬件中表现出极强的可靠性，这直接归功于互联网比较聪明的一点——互联网由上千个路由连接起来，而不是集中在少数几个巨型的、脆弱的交换器（就像电话网络一样），这意味着故障可以很好地控制在本地，互联网可以轻易绕过去。<br/>
+　　一旦你的数据包到达了目的地，主机就会看你的服务号，然后反馈一个数据包给网页服务器，网页服务器通过数据包中的源地址知道要将反馈数据包发送给谁，网页服务器传出数据包，它将会被分成很多数据包，这些数据包的大小依据你的传输媒体和服务类型各种各样。</p>
+<h3>12.4.TCP和IP</h3>
+<p>　　要理解多数据包传输是如何完成的，你需要知道互联网实际上用了两个协议，一个堆叠于另一个之上。<br/>
+　　底层是IP（互联网协议/Internet Protocol），用于给在互联网中两个计算机之间交换信息的数据包标上源地址和目标地址，例如，当你访问http://www.tldp.org，你发送的数据包里会有你计算机的地址，譬如192.168.1.101，和http://www.tldp.org主机的地址152.2.210.81。这些地址的工作方式就和某人给你家写信一样，邮局的工作人员收信时会弄清你家的具体位置和怎么样的路线（route）才是最好的，就像路由器（router）做的那样。<br/>
+　　上层就是TCP（传输控制协议/Transmission Control Protocol），让传输过程更可靠。当两台机器建立TCP连接时（通过IP），接收方需要将每一个接受到的数据包发送一个确认给发送方，如果发送方在预定时间内没有收到某个数据包的接受确认信息，它会重新发送一次数据包，此外，发送方会给每一个TCP数据包一个序列号，这样当数据包的顺序混乱时（网络连接不稳定时经常发生），接收方可以将数据包整合起来。<br/>
+　　TCP/IP数据包中也会包含一个校验和（checksum），这样当数据被错误链接所损坏时可以检测出来。校验和是以某种特殊计算方式计算数据包其余部分的一种结果，这种计算方式在包的其余部分或者校验和本身损坏时，重做计算所得的校验和与原校验和进行比对，可能会不同）。所以从使用TCP/IP和名称服务器的人的角度来看，在主机名/服务号之间传输数据是似乎是一种可靠的方式。可那些编写出网络协议的人几乎都不会想到包装数据、整合数据包、错误检测、检验和、重复发包这些技术下的底层协议会不会出问题。</p>
+<h3>12.5.HTTP,一个应用层协议</h3>
+<p>　　回到先前那个例子，你的浏览器和网页服务器之间会通过在TCP/IP协议之上的应用层协议会话，简单地通过应用层协议就可以将数据在浏览器和网页服务器之间传输，这个协议就叫HTTP（Hyper-Text Transfer Protocol），我们见过一个HTTP命令了——上面地GET命令就是。<br/>
+　　当GET命令想要通过端口号80传到www.tldp.org的网页服务器时，这个命令会被发送到正在监听端口80的服务器守护进程（server daemon），大多数互联网服务器都要通过服务器守护进程实现，这个守护进程什么都不做，就等着从端口上传来需要执行的命令。<br/>
+　　如果互联网的设计有一个至上的原则，那就是它的所有部分都应该尽可能简单和易于理解的，HTTP及其相关的协议（就像简单邮件传输协议SMTP/Simple Mail Transfer Protocol，用于在主机间的移动电子邮件）就是倾向于使用简单的、易读的、以回车或换行结尾的文本命令。<br/>
+　　这可能会有点低效，在某些环境下使用严格编码的二进制协议可能会快很多，但是经验告诉我们相比于让人类易于理解和易于表述，这点速度或效率的提升是微不足道的，而且这点速度或效率的提升还可能让事情变得复杂和不透明。	<br/>
+　　所以，服务器守护进程通过TCP/IP传回给你的也是文本，头部看起来可能像这样（略去了一部分）。</p>
+<pre><code>HTTP/1.1 200 OK
+Date: Sat, 10 Oct 1998 18:43:35 GMT
+Server: Apache/1.2.6 Red Hat
+Last-Modified: Thu, 27 Aug 1998 17:55:15 GMT
+Content-Length: 2982
+Content-Type: text/html
+</code></pre>
+
+<p>　　这个文本头部后面会有一些空行，然后会有网页的内容（这时与主机的连接已经断开），你的浏览器就会显示这些内容了，文本头部会告诉浏览器怎么做（这个例子中，内容类型文本（Content-Type）会告诉浏览器返回的数据是HTML）。</p>
+<h2>13.更多</h2>
+<p>　　<a href="http://www.tldp.org/HOWTO/Reading-List-HOWTO/">这里</a>有此文档所提到的主题的一些入门介绍，你可能还想读读<a href="http://www.catb.org/~esr/faqs/hacker-howto.html">如何成为一个黑客</a>。</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
