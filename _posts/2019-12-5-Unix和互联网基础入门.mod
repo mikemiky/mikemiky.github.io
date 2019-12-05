@@ -5,7 +5,6 @@ title:
 
 </head>
 <body>
-<h1>Unix与互联网基础入门</h1>
 <blockquote>
 <p><em>The Unix and Internet Fundamentals HOWTO</em><br/>
  <em>Created by Eric Steven Raymond, <a href="esr@thyrsus.com">&lt;esr@thyrsus.com &gt;</a></em> <br/>
