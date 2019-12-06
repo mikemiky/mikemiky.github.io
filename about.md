@@ -9,8 +9,11 @@ a student learning programming
 ### More Information
 
 None Weibo
+
 None Twitter
+
 None Facebook
+
 Just this Blog
 
 ### Contact me
