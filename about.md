@@ -4,12 +4,15 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+a student learning programming
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+None Weibo
+None Twitter
+None Facebook
+Just this Blog
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[chrystaltyler19007@gmail.com](mailto:chrystaltyler19007@gmail.com)
