@@ -7,8 +7,8 @@ title: Unix和互联网基础入门
 <body>
 <blockquote>
 <p><em>The Unix and Internet Fundamentals HOWTO</em><br/>
- <em>Created by Eric Steven Raymond, <a href="esr@thyrsus.com">&lt;esr@thyrsus.com &gt;</a></em> <br/>
-<em>翻译:Mike,  &lt; <a href="chrystaltyler19007@gmail.com">chrystaltyler19007@gmail.com</a> &gt;</em><br/>
+ <em>Created by Eric Steven Raymond, <a href="mailto:esr@thyrsus.com">&lt;esr@thyrsus.com &gt;</a></em> <br/>
+<em>翻译:Mike,  &lt; <a href="mailto:chrystaltyler19007@gmail.com">chrystaltyler19007@gmail.com</a> &gt;</em><br/>
 <em>本文档翻译基于原文档2.14版</em></p>
 </blockquote>
 
